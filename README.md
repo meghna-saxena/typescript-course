@@ -45,3 +45,33 @@ You can prevent/mitigate such errors, by checking `typeof` inside if statements 
 
 - `Async scripts` are executed as soon as the script is loaded, so it doesn't guarantee the order of execution (a script you included at the end may execute before the first script file )
 `Defer scripts` guarantees the order of execution in which they appear in the page.
+
+- To convert string to number use `+` before the param. Example:
+```js
+function add(num1, num2) {
+  if (typeof num1 === "number" && typeof num2 === "number") {
+    return num1 + num2;
+  } else {
+    return +num1 + +num2;
+    // convert to number by adding + before the param
+  }
+}
+```
+___________
+
+## Install typescript
+Globally install typescript:
+
+`npm install - g typescript`
+TS is a programming lanaguage only because of compiler which can compile TS code to JS, so with this command we install `ts compiler` which can transform `.ts` code
+
+`tsc` commands invokes ts compiler to compile the code
+
+- Strong IDE analyses your code and throws descriptive error
+
+-  In typescript file, when you're sure that certain element is there in the html document, use `! as <typecasting>`
+
+```ts
+const input1 = document.getElementById("num1")! as HTMLInputElement;
+const input2 = document.getElementById("num2")! as HTMLInputElement;
+```
