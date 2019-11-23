@@ -75,3 +75,16 @@ TS is a programming lanaguage only because of compiler which can compile TS code
 const input1 = document.getElementById("num1")! as HTMLInputElement;
 const input2 = document.getElementById("num2")! as HTMLInputElement;
 ```
+
+## Typescript advantages - Overview
+- TS adds `types` which is super important. With types we need to be explicit about how things work, and can avoid unnecessary errros. In addition, modern IDE have built-in types support
+
+- Can use next-gen js features (compiled down for older browsers, e.g babel)
+
+- Use non-javascript features like interfaces and generics. They dont compile to js, but they are only needed during development to give clearer errors.
+
+- Gives meta-programming features like decorators
+
+- Rich configuration options
+
+- Modern tooling/ide's that helps even in non-typescript projects
