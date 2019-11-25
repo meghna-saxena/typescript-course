@@ -216,3 +216,20 @@ Important: It is string and number (etc.), NOT String, Number etc.
 The core primitive types in TypeScript are all lowercase!
 
 __________________
+
+### Type assignment and type inference
+
+Typescript infers types implicitely with what first value is assigned to a variable.
+
+> Example:
+
+``` 
+let num1 = 5;
+//means num1 type is number
+```
+
+If some other type is reassigned TS will throw error
+
+Explicit types should be defined in function's parameters. No need to explicitely define the types for variables.
+
+
