@@ -166,8 +166,53 @@ Typescript also enable to write our own types
     Example: `1, 5.3, -10` all have `number` type
 
 - string
-  - Accepted in all 3 ways:
+
+  - Text values
+  - Accepts in all 3 ways:
 
     ```js
-      "Hi", 'Hi', `hi`
+    "Hi", "Hi", `hi`;
     ```
+
+- boolean
+  - true, false
+  - Just these two, no truthy or falsy values
+    example 0 is falsy, but its not related to false value of boolean type. Truthy and falsy are js concepts during runtime when some conditionals are met under if statements
+
+---
+
+Note:
+
+Typescript's type system helps only during development (i.e before the code gets compiled)
+
+Don't open `app.js` and `app.ts` at the same time in editor, it throws error for duplicate redeclaration of variables
+
+---
+
+### Typescript types vs Javascript types
+
+Javascript has `typeof` operator to check the types.
+
+```js
+if (typeof n1 !== 'number' || typeof n2 !== 'number') {
+  throw new Error('Incorrect input)
+}
+```
+
+so it fails at `runtime`, if incorrect type is passed
+
+The key difference is:
+
+- JS is `dynamically-typed`. Types can change during runtime, so `errors during runtime`.
+- TS is `statically-typed`. Incorrect types throw `errors during development`.
+
+Important: 
+
+### Type Casing
+In TypeScript, you work with types like string or number.
+
+Important: It is string and number (etc.), NOT String, Number etc.
+
+The core primitive types in TypeScript are all lowercase!
+
+__________________
