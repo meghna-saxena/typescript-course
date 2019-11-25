@@ -1,8 +1,9 @@
-# Typescript 
+# Typescript
 
 ## What is typescript & why to use it?
-- Typescript is a `javascript superset`, means its a programming langauge that's has been built up on javascript. 
-Its not a brand new language.
+
+- Typescript is a `javascript superset`, means its a programming langauge that's has been built up on javascript.
+  Its not a brand new language.
 - Adds new features and advantages to javascript
 
 One disadvantage:
@@ -11,9 +12,10 @@ It cant be execute by javascript environments like web browsers, similarly nodej
 So, typescript is a programming lanaguage as well as a powerful tool/ compiler which compiles typescript code to javascript
 
 ### Next question?
+
 How typescript then add features if after compilation you get regular javascript?
 
-- Features are compiled to JS "workarounds", that means your nice syntax is compiled to more complicated javascript syntax 
+- Features are compiled to JS "workarounds", that means your nice syntax is compiled to more complicated javascript syntax
 
 - Add types and possible `errors are found earlier before script is run` (compilation error) and error occurs in runtime in browser
 
@@ -23,10 +25,10 @@ Consider this example:
 
 ```js
 function add(num1, num2) {
-    return num1 + num2;
+  return num1 + num2;
 }
 
-console.log(add('2','3'));
+console.log(add("2", "3"));
 
 // this will lead to unwanted behavior since you're concatenating 2 strings
 // '2' + '3'
@@ -44,9 +46,10 @@ You can prevent/mitigate such errors, by checking `typeof` inside if statements 
 - Always, add defer property to `<script>` tag, cause javascript is single-threaded, if its looking for html elements like button to add event listners to, it will throw error, since your page has stopped parsing. Or add script in body.
 
 - `Async scripts` are executed as soon as the script is loaded, so it doesn't guarantee the order of execution (a script you included at the end may execute before the first script file )
-`Defer scripts` guarantees the order of execution in which they appear in the page.
+  `Defer scripts` guarantees the order of execution in which they appear in the page.
 
 - To convert string to number use `+` before the param. Example:
+
 ```js
 function add(num1, num2) {
   if (typeof num1 === "number" && typeof num2 === "number") {
@@ -57,9 +60,11 @@ function add(num1, num2) {
   }
 }
 ```
-___________
+
+---
 
 ## Install typescript
+
 Globally install typescript:
 
 `npm install - g typescript`
@@ -69,7 +74,7 @@ TS is a programming lanaguage only because of compiler which can compile TS code
 
 - Strong IDE analyses your code and throws descriptive error
 
--  In typescript file, when you're sure that certain element is there in the html document, use `! as <typecasting>`
+- In typescript file, when you're sure that certain element is there in the html document, use `! as <typecasting>`
 
 ```ts
 const input1 = document.getElementById("num1")! as HTMLInputElement;
@@ -77,6 +82,7 @@ const input2 = document.getElementById("num2")! as HTMLInputElement;
 ```
 
 ## Typescript advantages - Overview
+
 - TS adds `types` which is super important. With types we need to be explicit about how things work, and can avoid unnecessary errros. In addition, modern IDE have built-in types support
 
 - Can use next-gen js features (compiled down for older browsers, e.g babel)
@@ -98,13 +104,14 @@ It enables IDEs to provide code completion, advanced code refactoring, and stati
 It provides support for the latest JavaScript features, while compiling code into more compatible expressions.
 
 It provides the ability to define interfaces.
-____________________
+
+---
 
 ## Course Outline
 
 - Typescript basics
 - Compiler and configuration (deep dive)
-- Working with next-gen JS 
+- Working with next-gen JS
 - Classes and interfaces
 - Advanced types and TS features
 - Generics
@@ -115,6 +122,7 @@ ____________________
 - React + typescript & nodejs + typescript
 
 ### Prerequisites
+
 Good editor/IDE
 
 - VScode has good TS support built-in. It shows error, even before you save the file and the code is compiled
@@ -122,16 +130,44 @@ Good editor/IDE
 - If typescript is installed globally, it compiles all the ts files anywhere in the system, by running `tsc filename`
 
 - How to avoid manually re-comiling and reloading the webpage?
+
   - Create package.json by running `npm init -y`
   - Install dev-dependency `lite-server` by running `npm install --save-dev lite-server`
-  - Add script in package.json -> 
+  - Add script in package.json ->
 
   ```json
   {
     "scripts": {
-    "start": "lite-server"
+      "start": "lite-server"
     }
   }
   ```
+
   - lite-server is a simple light-weight development server which serves index.html file, and does hot-reloading
   - It usually serves the file on `localhost: 3000`, if port if available
+
+---
+
+---
+
+## Typescript basics and basic types
+
+### Using types:
+
+JS has some data types, Typescript add many more types to JS
+
+Typescript also enable to write our own types
+
+### Core types:
+
+- number
+
+  - There is only one type both in JS and TS. No specific types for integers or floats.
+    Example: `1, 5.3, -10` all have `number` type
+
+- string
+  - Accepted in all 3 ways:
+
+    ```js
+      "Hi", 'Hi', `hi`
+    ```
