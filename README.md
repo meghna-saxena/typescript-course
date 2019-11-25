@@ -85,6 +85,53 @@ const input2 = document.getElementById("num2")! as HTMLInputElement;
 
 - Gives meta-programming features like decorators
 
-- Rich configuration options
+- Rich configuration options - compiler and how to configure it
 
 - Modern tooling/ide's that helps even in non-typescript projects
+
+#### What _advantages_ are there to using TypeScript?
+
+It provides strong typing, with powerful type intference capabilities.
+
+It enables IDEs to provide code completion, advanced code refactoring, and static checking.
+
+It provides support for the latest JavaScript features, while compiling code into more compatible expressions.
+
+It provides the ability to define interfaces.
+____________________
+
+## Course Outline
+
+- Typescript basics
+- Compiler and configuration (deep dive)
+- Working with next-gen JS 
+- Classes and interfaces
+- Advanced types and TS features
+- Generics
+- Decorators
+- Working w/ namespaces and modules
+- Webpack (build tool) and typescript
+- Third-party libraries and typescript
+- React + typescript & nodejs + typescript
+
+### Prerequisites
+Good editor/IDE
+
+- VScode has good TS support built-in. It shows error, even before you save the file and the code is compiled
+
+- If typescript is installed globally, it compiles all the ts files anywhere in the system, by running `tsc filename`
+
+- How to avoid manually re-comiling and reloading the webpage?
+  - Create package.json by running `npm init -y`
+  - Install dev-dependency `lite-server` by running `npm install --save-dev lite-server`
+  - Add script in package.json -> 
+
+  ```json
+  {
+    "scripts": {
+    "start": "lite-server"
+    }
+  }
+  ```
+  - lite-server is a simple light-weight development server which serves index.html file, and does hot-reloading
+  - It usually serves the file on `localhost: 3000`, if port if available
