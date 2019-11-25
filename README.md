@@ -230,6 +230,12 @@ let num1 = 5;
 
 If some other type is reassigned TS will throw error
 
-Explicit types should be defined in function's parameters. No need to explicitely define the types for variables.
+Explicit types should be defined in function's parameters. 
 
+No need to explicitely define the types for variables.
 
+const age: number = 29;
+
+TypeScript would be able to infer the type (and hence you should omit ":number") but here, we actually also have an explicit type assignment.
+
+JS has no compilation step but at runtime, you can check for certain types (e.g. in if conditions). TS on the other hand allows you to catch certain errors during development since it checks types during compilation as well.
